@@ -2,12 +2,18 @@
   <head>
   </head>
   <body>
-    <a id="button">Test Function</a>
+    <form name="test-form" id="test-form">
+        <p>
+          <label>Test field<br /><input type="text" name="test" value="" /></label>
+        </p>
+        <p>
+          <button type="submit" id="submit">Submit</button>
+      </form>
   </body>
   <script>
     async function testFunction( event ) {
         console.log( "testFunction fired");
-        
+
         // Prevent form submit
         event.preventDefault()
 
@@ -32,6 +38,6 @@
         .catch(error => { console.error(error); });
       }
 
-    document.querySelector("#button").addEventListener("submit", testFunction)
+    document.querySelector("#test-form").addEventListener("submit", testFunction)
   </script>
 </html>
